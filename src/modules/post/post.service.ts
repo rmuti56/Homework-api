@@ -169,7 +169,7 @@ const posts = [
     body:
       "Void appear void behold us. Give. Our you lights made a first bearing fruitful, his itself own seed Divided he won't for living cattle from herb evening fruitful lesser kind.",
     image_url: 'http://lorempixel.com/320/240?random19',
-    created_at: '2013-01-10 16:49:29',
+    created_at: '2013-01-10 16:49:30',
   },
   {
     id: 20,
