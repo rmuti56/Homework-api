@@ -1,7 +1,8 @@
 import { Injectable } from '@nestjs/common';
-import { PaginationDto } from 'src/common';
+import { GetManyResponse, PaginationDto } from 'src/common/dtos/pagination.dto';
+import { PostDto } from './dtos/post.dto';
 
-const posts = [
+const posts: PostDto[] = [
   {
     id: 1,
     author_id: 1,
@@ -183,7 +184,7 @@ const posts = [
 ];
 @Injectable()
 export class PostService {
-  getPosts(paginationDto: PaginationDto) {
+  getPosts(paginationDto: PaginationDto): GetManyResponse<PostDto> {
     const { limit, page } = paginationDto;
     const postsResponse = posts.slice(
       this.getStartItem(page, limit),
