@@ -192,10 +192,11 @@ export class PostService {
 
     return {
       items: postsResponse,
-      currentPage: paginationDto.page,
+      currentPage: Number(paginationDto.page),
       totalItem: posts.length,
-      itemPerPage: limit,
+      itemPerPage: Number(limit),
       itemCount: postsResponse.length,
+      totalPage: Math.ceil(posts.length / postsResponse.length),
     };
   }
 
